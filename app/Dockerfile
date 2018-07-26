@@ -26,7 +26,7 @@ RUN apk add --no-cache \
 # Get Mattermost
 RUN mkdir -p /mattermost/data \
     && if [ "$edition" = "team" ] ; then curl https://releases.mattermost.com/$MM_VERSION/mattermost-team-$MM_VERSION-linux-amd64.tar.gz | tar -xvz ; \
-      else curl https://civicactions.github.io/gnconnect-webapp/gnconnect2-webapp.tar.gz | tar -xvz ; fi \
+      else curl https://civicactions.github.io/gnconnect-webapp/gnconnect-webapp.tar.gz | tar -xvz ; fi \
     && cp /mattermost/config/config.json /config.json.save \
     && rm -rf /mattermost/config/config.json
 
